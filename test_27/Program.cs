@@ -6,7 +6,6 @@
 
 // 9012 -> 12
 
-
 Console.Clear();
 Console.Write("Введите число: ");
 int number =Convert.ToInt32(Console.ReadLine());
@@ -17,5 +16,4 @@ if(number%10 ==1)
 {
     sum = sum + (number%10);    
 }
-
 Console.Write(sum);

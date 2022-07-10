@@ -5,12 +5,22 @@
 Console.Clear();
 int [] array = new int[8] {1, 2, 5, 7, 19, 6, 1, 33};
 
-void PrintArray (int [] arr)
+
+void Print( int [] arri)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arri.Length; i++)
     {
-        Console.Write($"{arr[i]} ");
+        if(i == 0)
+        {
+            Console.Write("[" + arri[i]);
+        }
+        if(i< arri.Length-1)
+        {
+            Console.Write(arri[i] + ",");
+        }
+        else Console.Write(arri[i] + "]");
     }
 }
 
-PrintArray(array);
+
+Print(array);
