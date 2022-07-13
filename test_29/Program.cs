@@ -12,7 +12,7 @@ void Print( int [] arri)
     {
         if(i == 0)
         {
-            Console.Write("[" + arri[i]);
+            Console.Write("[");
         }
         if(i< arri.Length-1)
         {
