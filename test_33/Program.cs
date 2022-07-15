@@ -5,17 +5,28 @@ int number = int.Parse(Console.ReadLine());
 
 void PrintNumber(int[] arr, int num)
 {
-    int i = 0;
-    while (i < arr.Length)
+    for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] == num)
         {
-            Console.WriteLine("Yes");
-            return;
+            Console.WriteLine("Yes");return;
         }
-        i++;
     }
     Console.Write("NO");
 }
+// {
+//     int i = 0;
+//     while (i < arr.Length)
+//     {
+//         if (arr[i] == num)
+//         {
+//             Console.WriteLine("Yes");
+//             return;
+//         }
+//         i++;
+//     }
+//     Console.Write("NO");
+// }
 
 PrintNumber(array, number);
+

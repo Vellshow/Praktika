@@ -7,32 +7,33 @@ Console.Clear();
 Console.WriteLine("Введите длинну массива: ");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите минимальное число массива: ");
-double a = int.Parse(Console.ReadLine());
+int a = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите максимальное число массива: ");
-double b = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
 
-int[] RandomArray(int size, int min, int max)
+double[] RandomArray(int size, int min, int max)
 {
-    Random rnd = new Random();
     double[] array = new double[size];
+    Random rnd = new Random();
 
-    for (double i = 0; i < size; i++)
+
+    for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.NextDouble() * (max - min) + min;
     }
     return array;
 }
 
 
-void Print( double [] arri)
+void Print(double[] arri)
 {
-    for (double i = 0; i < arri.Length; i++)
+    for (int i = 0; i < arri.Length; i++)
     {
-        if(i == 0)
+        if (i == 0)
         {
             Console.Write("[");
         }
-        if(i< arri.Length-1)
+        if (i < arri.Length - 1)
         {
             Console.Write(arri[i] + ",");
         }
@@ -40,27 +41,22 @@ void Print( double [] arri)
     }
 }
 
-void PrintMaxMin( double [] arr)
+double PrintMaxMin(double[] arr)
 {
-    int i = 0;
     double max = arr[0];
     double min = arr[0];
-    double sum = 0;
 
-    while(max < arr.Length)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] > max)
-        {
-            max = arr[i];
-        }
-        if(arr[i]< min)
-        {
-            min = arr[i];
-        }
+        if (max < arr[i]) max = arr[i];
+
+        else if (min > arr[i]) min = arr[i];
     }
-    Console.Write($"Разница между минимальным значение и максимальным{max-min}");
+    double [] arrw = {min, max};
+    return arrw;
 }
 
-double [] array1 = RandomArray(n, a, b);
-Print(array1);
-PrintMaxMin(array1);
+    double[] array1 = RandomArray(n, a, b);
+    Print(array1);
+    Console.WriteLine();
+    double [] arr2 =PrintMaxMin(array1);

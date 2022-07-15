@@ -1,10 +1,4 @@
-﻿// Задача 37: Найдите произведение пар чисел в одномерном массиве.
-// Парой считаем первый и последний элемент, второй и предпоследний
-// и т.д. Результат запишите в новом массиве.
-// [1 2 3 4 5] -> 5 8 3
-// [6 7 3 6] -> 36 21
-
-Console.Clear();
+﻿Console.Clear();
 Console.WriteLine("Введите длинну массива: ");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите минимальное число массива: ");
@@ -39,19 +33,22 @@ void Print(int[] arri)
     }
 }
 
-
-void Umno(int[] array2, int nn)
+int [] Array2(int[] arri)
 {
-    int j = array2.Length - 1;
-    for (int i = 0; i < (array2.Length+1)/2; i++)
+    int temp = 0;
+    int j = arri.Length - 1;
+    for (int i = 0; i < j; i++)
     {
-        Console.Write(array2[i] * array2[j] + " ");
+        temp = arri[i];
+        arri[i] = arri[j];
+        arri[j] = temp;
         j--;
     }
-    if (nn % 2 > 0)
-    Console.Write(array2[array2.Length / 2]);
+    return arri;
 }
-int[] array1 = CreateArrayRndint(n, minm, maxx);
-Print(array1);
+
+int [] arrayq= CreateArrayRndint(n, minm, maxx);
+Print(arrayq);
 Console.WriteLine();
-Umno(array1, n);
+int [] arrs = Array2(arrayq);
+Print(arrs); 
