@@ -3,7 +3,20 @@
 // 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
 Console.Clear();
-int [] array = new int[8] {1, 2, 5, 7, 19, 6, 1, 33};
+Console.Write("Введите длину массива: ");
+int n = int.Parse(Console.ReadLine());
+
+
+int [] NewArray( int size)
+{
+    Random rnd = new Random();
+    int [] Array = new int [size];
+    for (int i = 0; i < size; i++)
+    {
+        Array[i] = rnd.Next(0, 100);
+    }
+    return Array;
+}
 
 
 void Print( int [] arri)
@@ -22,5 +35,5 @@ void Print( int [] arri)
     }
 }
 
-
-Print(array);
+int [] Array1 = NewArray(n);
+Print(Array1);

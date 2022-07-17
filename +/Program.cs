@@ -356,9 +356,9 @@
 
 // int[] array1 =NewArray(e);
 // PrintArray(array1);
-Console.Clear();
-Console.Write("Введите число: ");
-int number =Convert.ToInt32(Console.ReadLine());
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
 // int sum = 0;
 // int a = 0;
@@ -369,17 +369,49 @@ int number =Convert.ToInt32(Console.ReadLine());
 // }
 // Console.Write(sum);
 
-void PrintSum( int num)
-{
-    int sum = 0;
-    int temp = 0;
-    while(num>0)
-    {
-        temp = num/10;
-        num = num;
-        sum+=temp;
-    }
-    Console.WriteLine(sum);
-}
+// void PrintSum( int num)
+// {
+//     int sum = 0;
+//     int temp = 0;
+//     while(num>0)
+//     {
+//         temp = num/10;
+//         num = num;
+//         sum+=temp;
+//     }
+//     Console.WriteLine(sum);
+// }
 
-PrintSum(number);
+// PrintSum(number);
+
+// double F(int n)
+// {
+//     if (n == 1) return 1;
+//     else return n* F(n-1);
+// }
+
+// for (int i = 1; i <170; i++)
+// {
+//     Console.WriteLine($" {i}! == {F(i)}");
+// }
+
+// int F ( int n)
+// {
+//     if (n==1 || n == 2 ) return 1;
+//     else return F(n-1 ) + F(n - 2);
+// }
+
+
+// for (int i = 1; i < 100; i++)
+// {
+//     Console.WriteLine($"{i} ={F(i)}");
+// }
+// ;
+
+// int n = 4;
+// int a = -n;
+// while(a <=n)
+// {
+//     Console.WriteLine(a);
+//     a++;
+// }

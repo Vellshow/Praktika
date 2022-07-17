@@ -19,7 +19,7 @@ double[] RandomArray(int size, int min, int max)
 
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.NextDouble() * (max - min) + min;
+        array[i] = Math.Round((rnd.NextDouble() * (max - min) + min),2);
     }
     return array;
 }
@@ -35,13 +35,13 @@ void Print(double[] arri)
         }
         if (i < arri.Length - 1)
         {
-            Console.Write(arri[i] + ",");
+            Console.Write(arri[i] + ";");
         }
         else Console.Write(arri[i] + "]");
     }
 }
 
-double PrintMaxMin(double[] arr)
+void PrintMaxMin(double[] arr)
 {
     double max = arr[0];
     double min = arr[0];
@@ -52,11 +52,22 @@ double PrintMaxMin(double[] arr)
 
         else if (min > arr[i]) min = arr[i];
     }
-    double [] arrw = {min, max};
-    return arrw;
+    Console.WriteLine($"Макс число:{max} Минимальное число:{min} = Раздница между ними:{max-min}");
 }
 
     double[] array1 = RandomArray(n, a, b);
     Print(array1);
     Console.WriteLine();
-    double [] arr2 =PrintMaxMin(array1);
+    PrintMaxMin(array1);
+    
+
+
+//     double[] a = new double[5];
+
+// Random random = new Random();
+// for (int i = 0; i < 5; i++)
+// {
+//     a[i] = Math.Round((random.NextDouble() * 100), 2); 
+//     Console.Write(a[i]);
+//     Console.WriteLine();
+// }
