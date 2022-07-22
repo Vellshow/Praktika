@@ -417,3 +417,58 @@
 // }
 
 
+// Задача 65: Задайте значения M и N. Напишите программу, которая
+// выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 6, 7, 8"
+
+Console.Clear();
+Console.WriteLine();
+int sum1 =int.Parse(Console.ReadLine());
+Console.WriteLine();
+int sum2 =int.Parse(Console.ReadLine());
+
+void NewArray(int n, int m)
+{
+    if(n>m)
+    {
+    (m == n-1) return;
+    NewArray(m-1, n);
+    Console.Write($"{m} ");
+    }
+    else if(n == m-1) return;
+    NewArray(n-1, m);
+    Console.Write($"{n} ");
+}
+NewArray(sum1, sum2);
+
+// Console.Clear();
+// Console.WriteLine("Задайте первое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Задайте второе число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+
+// NaturalNumber(num, num1);
+// // maxMin NaturalNumber(int number, int number1)
+// void NaturalNumber(int number, int number1)
+// {
+// 	// if (number1 == number - 1) return;
+// 	if (number < number1)
+// 	{
+// 		Console.Write($"{number} ");
+// 		NaturalNumber(number + 1, number1);
+		
+// 	}
+	
+// 	if (number > number1)
+// 	{
+// 		Console.Write($"{number} ");
+// 		NaturalNumber(number - 1, number1);
+		
+// 	}
+// 	if(number==number1)
+// 	Console.Write($"{number1}");
+// 	// Console.Write($"{number1}, ");
+// 	// NaturalNumber(number, number1 - 1);
+
+// }
