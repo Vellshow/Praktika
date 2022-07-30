@@ -30,25 +30,18 @@ int[,] CreateMatrixRndInt(int m, int n, int min, int max)
 
 int[,] Array(int[,] Arr)
 {
-    // int[,] arrs = new int[Arr.GetLength(0), Arr.GetLength(1)];
-    // arrs = Arr;
-    // int index = Arr[Arr.GetLength(0) - 1, Arr.GetLength(1) - 1];
-    // int index2 = Arr[0, 0];
+    int[,] arrs = new int[Arr.GetLength(0), Arr.GetLength(1)];
+    arrs = Arr;
+    int index = Arr[Arr.GetLength(0) - 1, Arr.GetLength(1) - 1];
+    int index2 = Arr[0, 0];
 
 
-    // arrs[0, 0] = index;
-    // arrs[arrs.GetLength(0) - 1, arrs.GetLength(1) - 1] = index2;
-    // return arrs;
-
-
-    for (int index = 0; index < Arr.GetLength(0); i++)
-    {
-        for (int index2 = Arr.Length-1; index2 = arrs.length; i++)
-        {
-
-        }
-    }
+    arrs[0, 0] = index;
+    arrs[arrs.GetLength(0) - 1, arrs.GetLength(1) - 1] = index2;
+    return arrs;
 }
+
+ 
 void PrintMatrix(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
